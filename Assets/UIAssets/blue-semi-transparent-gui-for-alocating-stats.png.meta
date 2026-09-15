@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: adabcd2ae82cc154c98fb90623d69850
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7901866371874690844
+    second: blue-semi-transparent-gui-for-alocating-stats_0
+  - first:
+      213: 966943746659518954
+    second: blue-semi-transparent-gui-for-alocating-stats_1
+  - first:
+      213: 3541697047427454987
+    second: blue-semi-transparent-gui-for-alocating-stats_2
+  - first:
+      213: 4400210669324745811
+    second: blue-semi-transparent-gui-for-alocating-stats_3
+  - first:
+      213: -4786421136212389319
+    second: blue-semi-transparent-gui-for-alocating-stats_4
+  - first:
+      213: -6774351033944613251
+    second: blue-semi-transparent-gui-for-alocating-stats_5
+  - first:
+      213: 2124236704206651946
+    second: blue-semi-transparent-gui-for-alocating-stats_6
+  - first:
+      213: 2302170676766556999
+    second: blue-semi-transparent-gui-for-alocating-stats_7
+  - first:
+      213: 4178396511105053584
+    second: blue-semi-transparent-gui-for-alocating-stats_8
+  - first:
+      213: -3396149170173606794
+    second: blue-semi-transparent-gui-for-alocating-stats_9
+  - first:
+      213: -3183925978434720733
+    second: blue-semi-transparent-gui-for-alocating-stats_10
+  - first:
+      213: -6443921599321755502
+    second: blue-semi-transparent-gui-for-alocating-stats_11
+  - first:
+      213: 6763565049821672087
+    second: blue-semi-transparent-gui-for-alocating-stats_12
+  - first:
+      213: -3166665660166329664
+    second: blue-semi-transparent-gui-for-alocating-stats_13
+  - first:
+      213: -3684075882273227980
+    second: blue-semi-transparent-gui-for-alocating-stats_14
+  - first:
+      213: -6534201320190912960
+    second: blue-semi-transparent-gui-for-alocating-stats_15
+  - first:
+      213: -4300090683007187619
+    second: blue-semi-transparent-gui-for-alocating-stats_16
+  - first:
+      213: -2007195200918471110
+    second: blue-semi-transparent-gui-for-alocating-stats_17
+  - first:
+      213: -3500622240287440758
+    second: blue-semi-transparent-gui-for-alocating-stats_18
+  - first:
+      213: -5270990004557910594
+    second: blue-semi-transparent-gui-for-alocating-stats_19
+  - first:
+      213: 4783178616390306843
+    second: blue-semi-transparent-gui-for-alocating-stats_20
+  - first:
+      213: 5410550764249242484
+    second: blue-semi-transparent-gui-for-alocating-stats_21
+  - first:
+      213: 8756152521125320927
+    second: blue-semi-transparent-gui-for-alocating-stats_22
+  - first:
+      213: 3887087358661412090
+    second: blue-semi-transparent-gui-for-alocating-stats_23
+  - first:
+      213: 9140684099464889446
+    second: blue-semi-transparent-gui-for-alocating-stats_24
+  - first:
+      213: 738551808426215529
+    second: blue-semi-transparent-gui-for-alocating-stats_25
+  - first:
+      213: 4344216612061515075
+    second: blue-semi-transparent-gui-for-alocating-stats_26
+  - first:
+      213: 4827280393514046435
+    second: blue-semi-transparent-gui-for-alocating-stats_27
+  - first:
+      213: 1037743876844062037
+    second: blue-semi-transparent-gui-for-alocating-stats_28
+  - first:
+      213: -4816533242672315514
+    second: blue-semi-transparent-gui-for-alocating-stats_29
+  - first:
+      213: -3615396647689350774
+    second: blue-semi-transparent-gui-for-alocating-stats_30
+  - first:
+      213: -3025545007184712695
+    second: blue-semi-transparent-gui-for-alocating-stats_31
+  - first:
+      213: -9011889040075330481
+    second: blue-semi-transparent-gui-for-alocating-stats_32
+  - first:
+      213: -7248355158223587160
+    second: blue-semi-transparent-gui-for-alocating-stats_33
+  - first:
+      213: -6802859364364456428
+    second: blue-semi-transparent-gui-for-alocating-stats_34
+  - first:
+      213: 4913918272202800105
+    second: blue-semi-transparent-gui-for-alocating-stats_35
+  - first:
+      213: 5453377881951684730
+    second: blue-semi-transparent-gui-for-alocating-stats_36
+  - first:
+      213: -2060895813827501833
+    second: blue-semi-transparent-gui-for-alocating-stats_37
+  - first:
+      213: -213600027613926675
+    second: blue-semi-transparent-gui-for-alocating-stats_38
+  - first:
+      213: 7690275923107134953
+    second: blue-semi-transparent-gui-for-alocating-stats_39
+  - first:
+      213: -1667396220706262714
+    second: blue-semi-transparent-gui-for-alocating-stats_40
+  - first:
+      213: -1978634045294732530
+    second: blue-semi-transparent-gui-for-alocating-stats_41
+  - first:
+      213: 1448831830663604236
+    second: blue-semi-transparent-gui-for-alocating-stats_42
+  - first:
+      213: 5631979153488511035
+    second: blue-semi-transparent-gui-for-alocating-stats_43
+  - first:
+      213: 5319175583065601437
+    second: blue-semi-transparent-gui-for-alocating-stats_44
+  - first:
+      213: -313404887350769630
+    second: blue-semi-transparent-gui-for-alocating-stats_45
+  - first:
+      213: 8698685778092143081
+    second: blue-semi-transparent-gui-for-alocating-stats_46
+  - first:
+      213: 5413274024168468501
+    second: blue-semi-transparent-gui-for-alocating-stats_47
+  - first:
+      213: 1993465931509034783
+    second: blue-semi-transparent-gui-for-alocating-stats_48
+  - first:
+      213: -2117739710062502085
+    second: blue-semi-transparent-gui-for-alocating-stats_49
+  - first:
+      213: -3021053823692829171
+    second: blue-semi-transparent-gui-for-alocating-stats_50
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blue-semi-transparent-gui-for-alocating-stats_21
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 160
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47b5b46f043261b40800000000000000
+      internalID: 5410550764249242484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue-semi-transparent-gui-for-alocating-stats_22
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 160
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd8d0dc635a148970800000000000000
+      internalID: 8756152521125320927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue-semi-transparent-gui-for-alocating-stats_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af4cce7ab55b1f530800000000000000
+      internalID: 3887087358661412090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue-semi-transparent-gui-for-alocating-stats_30
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 57
+        width: 81
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a81965477e783ddc0800000000000000
+      internalID: -3615396647689350774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue-semi-transparent-gui-for-alocating-stats_34
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 75
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41eed1283736791a0800000000000000
+      internalID: -6802859364364456428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue-semi-transparent-gui-for-alocating-stats_38
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 72
+        width: 55
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deaee0618e3290df0800000000000000
+      internalID: -213600027613926675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8ba28511d91012146bbc86a1588ccc0e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      blue-semi-transparent-gui-for-alocating-stats_0: -7901866371874690844
+      blue-semi-transparent-gui-for-alocating-stats_1: 966943746659518954
+      blue-semi-transparent-gui-for-alocating-stats_10: -3183925978434720733
+      blue-semi-transparent-gui-for-alocating-stats_11: -6443921599321755502
+      blue-semi-transparent-gui-for-alocating-stats_12: 6763565049821672087
+      blue-semi-transparent-gui-for-alocating-stats_13: -3166665660166329664
+      blue-semi-transparent-gui-for-alocating-stats_14: -3684075882273227980
+      blue-semi-transparent-gui-for-alocating-stats_15: -6534201320190912960
+      blue-semi-transparent-gui-for-alocating-stats_16: -4300090683007187619
+      blue-semi-transparent-gui-for-alocating-stats_17: -2007195200918471110
+      blue-semi-transparent-gui-for-alocating-stats_18: -3500622240287440758
+      blue-semi-transparent-gui-for-alocating-stats_19: -5270990004557910594
+      blue-semi-transparent-gui-for-alocating-stats_2: 3541697047427454987
+      blue-semi-transparent-gui-for-alocating-stats_20: 4783178616390306843
+      blue-semi-transparent-gui-for-alocating-stats_21: 5410550764249242484
+      blue-semi-transparent-gui-for-alocating-stats_22: 8756152521125320927
+      blue-semi-transparent-gui-for-alocating-stats_23: 3887087358661412090
+      blue-semi-transparent-gui-for-alocating-stats_24: 9140684099464889446
+      blue-semi-transparent-gui-for-alocating-stats_25: 738551808426215529
+      blue-semi-transparent-gui-for-alocating-stats_26: 4344216612061515075
+      blue-semi-transparent-gui-for-alocating-stats_27: 4827280393514046435
+      blue-semi-transparent-gui-for-alocating-stats_28: 1037743876844062037
+      blue-semi-transparent-gui-for-alocating-stats_29: -4816533242672315514
+      blue-semi-transparent-gui-for-alocating-stats_3: 4400210669324745811
+      blue-semi-transparent-gui-for-alocating-stats_30: -3615396647689350774
+      blue-semi-transparent-gui-for-alocating-stats_31: -3025545007184712695
+      blue-semi-transparent-gui-for-alocating-stats_32: -9011889040075330481
+      blue-semi-transparent-gui-for-alocating-stats_33: -7248355158223587160
+      blue-semi-transparent-gui-for-alocating-stats_34: -6802859364364456428
+      blue-semi-transparent-gui-for-alocating-stats_35: 4913918272202800105
+      blue-semi-transparent-gui-for-alocating-stats_36: 5453377881951684730
+      blue-semi-transparent-gui-for-alocating-stats_37: -2060895813827501833
+      blue-semi-transparent-gui-for-alocating-stats_38: -213600027613926675
+      blue-semi-transparent-gui-for-alocating-stats_39: 7690275923107134953
+      blue-semi-transparent-gui-for-alocating-stats_4: -4786421136212389319
+      blue-semi-transparent-gui-for-alocating-stats_40: -1667396220706262714
+      blue-semi-transparent-gui-for-alocating-stats_41: -1978634045294732530
+      blue-semi-transparent-gui-for-alocating-stats_42: 1448831830663604236
+      blue-semi-transparent-gui-for-alocating-stats_43: 5631979153488511035
+      blue-semi-transparent-gui-for-alocating-stats_44: 5319175583065601437
+      blue-semi-transparent-gui-for-alocating-stats_45: -313404887350769630
+      blue-semi-transparent-gui-for-alocating-stats_46: 8698685778092143081
+      blue-semi-transparent-gui-for-alocating-stats_47: 5413274024168468501
+      blue-semi-transparent-gui-for-alocating-stats_48: 1993465931509034783
+      blue-semi-transparent-gui-for-alocating-stats_49: -2117739710062502085
+      blue-semi-transparent-gui-for-alocating-stats_5: -6774351033944613251
+      blue-semi-transparent-gui-for-alocating-stats_50: -3021053823692829171
+      blue-semi-transparent-gui-for-alocating-stats_6: 2124236704206651946
+      blue-semi-transparent-gui-for-alocating-stats_7: 2302170676766556999
+      blue-semi-transparent-gui-for-alocating-stats_8: 4178396511105053584
+      blue-semi-transparent-gui-for-alocating-stats_9: -3396149170173606794
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
