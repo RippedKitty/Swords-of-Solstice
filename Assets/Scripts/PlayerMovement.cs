@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private Vector2 movementInput;
 
+    [Header("State")]
+    public bool canMove = true;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -41,7 +44,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (moveAction == null) return;
+        if (moveAction == null || !canMove) 
+        {
+            movementInput = Vector2.zero;
+            animator.SetBool("IsMoving", false);
+            return;
+        }
 
         // Read the joystick/keyboard vector directly from the reference
         movementInput = moveAction.action.ReadValue<Vector2>();

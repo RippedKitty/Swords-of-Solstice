@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+using UnityEngine;
+using UnityEngine.InputSystem;
 using System.Collections.Generic;
 
 [System.Serializable]
@@ -41,6 +42,18 @@ public class CharacterCreationManager : MonoBehaviour
     void Start()
     {
         availablePoints = totalStatPoints;
+    }
+
+    void Update()
+    {
+        // Allow the player to hit Escape to pick a random perk and move on
+        if (introManager != null && introManager.currentState == IntroSequenceManager.IntroState.PerkSelection)
+        {
+            if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+            {
+                ConfirmPerkSelection(true);
+            }
+        }
     }
 
     // --- Perk Selection Methods (Link these to UI Buttons) ---

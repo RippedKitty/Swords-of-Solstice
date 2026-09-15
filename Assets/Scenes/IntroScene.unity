@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IntroSequenceManager
   currentState: 0
-  cameraPanner: {fileID: 829036089}
+  cameraPanner: {fileID: 302643534}
   dialogueController: {fileID: 759496856}
   charCreationManager: {fileID: 1830824130}
   dialogueUI: {fileID: 1058855392}
@@ -157,7 +157,9 @@ MonoBehaviour:
   statAllocationUI: {fileID: 506071405}
   introAnimator: {fileID: 1502352127}
   introAnimationTrigger: PlayIntro
-  openingAnimationDuration: 3
+  openingAnimationDuration: 6
+  fadeImage: {fileID: 163720981}
+  backgroundOfAnim: {fileID: 713904506}
   fadeStepDelay: 0.5
   fadeStepAmount: 0.1
   animationFadeOutDuration: 1
@@ -271,6 +273,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &249069733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 249069734}
+  m_Layer: 0
+  m_Name: AngelPortalCamerFocus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &249069734
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249069733}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 757187201}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &271932673
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +370,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -345,7 +378,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
 --- !u!4 &271932675
@@ -377,6 +410,7 @@ GameObject:
   - component: {fileID: 302643531}
   - component: {fileID: 302643530}
   - component: {fileID: 302643533}
+  - component: {fileID: 302643534}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -502,6 +536,47 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &302643534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302643529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4cc6df3cfdad924ea651cf4df7c5500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IntroCameraPanner
+  introManager: {fileID: 69190649}
+  goddessView: {fileID: 610530722}
+  statMenuView: {fileID: 659287747}
+  portalView: {fileID: 757187201}
+  panDuration: 2
+  panCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &443291046
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,6 +790,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506071405}
   m_CullTransparentMesh: 1
+--- !u!1 &610530721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 610530722}
+  m_Layer: 0
+  m_Name: AngelCameraFocus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &610530722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610530721}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1521617270}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &659287746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 659287747}
+  m_Layer: 0
+  m_Name: CrystalBallCameraFocus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &659287747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659287746}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1227433025}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &713904506
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,7 +997,8 @@ Transform:
   m_LocalPosition: {x: 10.09, y: 3.24, z: -1.5}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 249069734}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &757187202
@@ -1000,10 +1138,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   dialogueTextComponent: {fileID: 443291048}
   introManager: {fileID: 69190649}
+  characterAnimator: {fileID: 1521617271}
+  talkingParameter: IsTalking
   typingSpeed: 0.05
-  dialoguePhase1: []
-  dialoguePhase2: []
-  dialoguePhase3: []
+  dialoguePhase1:
+  - You slumber in your world, but awaken here.
+  - Welcome to Solstice. Time crawls here.
+  - Ten thousand of our days equal one of yours.
+  - A Demon Lord threatens this realm's mainland.
+  - You have exactly five years to stop his march.
+  - I grant you a Philosopher's Stone.
+  - Death is not your end. It is but a checkpoint.
+  - Fleeing battle or falling resets your path.
+  - But your strength will remain.
+  - Now, chosen one... Claim your first gift.
+  dialoguePhase2:
+  - A fine choice. Now, mold your vessel.
+  - Strength is your raw physical power.
+  - Vitality governs health and endurance.
+  - Agility dictates speed and evasion in combat.
+  - Intelligence fuels magical mastery.
+  - Allocate these points to shape your destiny.
+  - You may do so at that crystal ball.
+  dialoguePhase3:
+  - 'Your form is complete. Heed the flow of time:'
+  - Five days to a week. Five weeks to a month.
+  - Four months to a year. One for each season.
+  - Do not waste a single day, chosen one.
+  - Step into the portal before you.
+  - You will awaken in a quiet village church.
+  - Your five-year journey begins now. Good luck.
 --- !u!4 &759496857
 Transform:
   m_ObjectHideFlags: 0
@@ -1092,80 +1256,7 @@ Transform:
   m_GameObject: {fileID: 805888574}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &829036088
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 829036090}
-  - component: {fileID: 829036089}
-  m_Layer: 0
-  m_Name: IntroCameraPanner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &829036089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829036088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4cc6df3cfdad924ea651cf4df7c5500, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IntroCameraPanner
-  introManager: {fileID: 69190649}
-  goddessView: {fileID: 1521617270}
-  statMenuView: {fileID: 1227433025}
-  portalView: {fileID: 757187201}
-  panDuration: 2
-  panCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &829036090
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829036088}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.49055, y: -2.86915, z: 0}
+  m_LocalPosition: {x: 0, y: 100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1262,7 +1353,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 302643531}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1312,8 +1403,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.00024414062, y: 0}
+  m_SizeDelta: {x: 0.00045621395, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1058855394
 MonoBehaviour:
@@ -1439,6 +1530,8 @@ GameObject:
   - component: {fileID: 1227433025}
   - component: {fileID: 1227433024}
   - component: {fileID: 1227433026}
+  - component: {fileID: 1227433027}
+  - component: {fileID: 1227433028}
   m_Layer: 0
   m_Name: CrystalBallObject_0
   m_TagString: Untagged
@@ -1518,7 +1611,8 @@ Transform:
   m_LocalPosition: {x: -10.09, y: 2.5, z: -1.5}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 659287747}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1227433026
@@ -1567,6 +1661,66 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.36, y: 0.4}
   m_EdgeRadius: 0
+--- !u!61 &1227433027
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227433023}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.36, y: 0.84}
+    newSize: {x: 0.36, y: 0.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.08, y: 1.53}
+  m_EdgeRadius: 0
+--- !u!114 &1227433028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227433023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1d537c4f48d64244ac7c7a99949237a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrystalBallInteract
+  introManager: {fileID: 69190649}
+  playerInRange: 0
 --- !u!1001 &1399897788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1577,6 +1731,46 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 955440705497889138, guid: cf3e159cc4df3a44aa65866bf7010150, type: 3}
       propertyPath: m_Size.x
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 955440705497889138, guid: cf3e159cc4df3a44aa65866bf7010150, type: 3}
+      propertyPath: m_Size.y
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 955440705497889138, guid: cf3e159cc4df3a44aa65866bf7010150, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 955440705497889138, guid: cf3e159cc4df3a44aa65866bf7010150, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 955440705497889138, guid: cf3e159cc4df3a44aa65866bf7010150, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 955440705497889138, guid: cf3e159cc4df3a44aa65866bf7010150, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 955440705497889138, guid: cf3e159cc4df3a44aa65866bf7010150, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216225675425399389, guid: cf3e159cc4df3a44aa65866bf7010150, type: 3}
+      propertyPath: m_Size.x
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216225675425399389, guid: cf3e159cc4df3a44aa65866bf7010150, type: 3}
+      propertyPath: m_Size.y
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216225675425399389, guid: cf3e159cc4df3a44aa65866bf7010150, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 905317000, guid: 5b9d2ca626cdcee40ac39dfdff8b833b, type: 3}
+    - target: {fileID: 5216225675425399389, guid: cf3e159cc4df3a44aa65866bf7010150, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5462925832534817041, guid: cf3e159cc4df3a44aa65866bf7010150, type: 3}
@@ -1785,7 +1979,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4316178728775977691, guid: 8401affa2eab59d4fb4b8ae18cf063a0, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1793,7 +1987,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
 --- !u!95 &1502352127
@@ -1828,6 +2022,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1521617270}
   - component: {fileID: 1521617269}
+  - component: {fileID: 1521617271}
   m_Layer: 0
   m_Name: AngelSpriteSheet_0
   m_TagString: Untagged
@@ -1907,9 +2102,32 @@ Transform:
   m_LocalPosition: {x: 0, y: 8, z: -1}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 610530722}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1521617271
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521617268}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fa1e56f2e989904419d105808e55fd1f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1654893547
 GameObject:
   m_ObjectHideFlags: 0
@@ -23474,7 +23692,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 500}
+  m_SizeDelta: {x: 700, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1756375293
 MonoBehaviour:
@@ -23544,7 +23762,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterCreationManager
   introManager: {fileID: 69190649}
-  availablePerks: []
+  availablePerks:
+  - perkName: Temporal Attunement
+    description: Time-consuming actions take 10% less in-game time.
+    bonusStrength: 0
+    bonusAgility: 0
+    bonusVitality: 0
+    bonusIntelligence: 0
+    bonusSpeed: 0
+  - perkName: Scholar's Mind
+    description: 5% XP earned bonus.
+    bonusStrength: 0
+    bonusAgility: 0
+    bonusVitality: 0
+    bonusIntelligence: 0
+    bonusSpeed: 0
+  - perkName: Wind-Walker
+    description: 8% Walk Speed Increase.
+    bonusStrength: 0
+    bonusAgility: 0
+    bonusVitality: 0
+    bonusIntelligence: 0
+    bonusSpeed: 0
+  - perkName: Silver Tongue
+    description: Buy and Sell prices adjusted by 5%.
+    bonusStrength: 0
+    bonusAgility: 0
+    bonusVitality: 0
+    bonusIntelligence: 0
+    bonusSpeed: 0
+  - perkName: Vampiric Touch
+    description: After Defeating an enemy, gain 1% of your max health back.
+    bonusStrength: 0
+    bonusAgility: 0
+    bonusVitality: 0
+    bonusIntelligence: 0
+    bonusSpeed: 0
+  - perkName: Wealth Blessing
+    description: Start with x copper.
+    bonusStrength: 0
+    bonusAgility: 0
+    bonusVitality: 0
+    bonusIntelligence: 0
+    bonusSpeed: 0
+  - perkName: Me Tank
+    description: Start with 5 bonus strength and vitality.
+    bonusStrength: 5
+    bonusAgility: 0
+    bonusVitality: 5
+    bonusIntelligence: 0
+    bonusSpeed: 0
+  - perkName: Speedy Boy
+    description: Start with 8 bonus agility.
+    bonusStrength: 0
+    bonusAgility: 8
+    bonusVitality: 0
+    bonusIntelligence: 0
+    bonusSpeed: 0
+  - perkName: Grammar Police
+    description: Start with 8 bonus Inteligence.
+    bonusStrength: 0
+    bonusAgility: 0
+    bonusVitality: 0
+    bonusIntelligence: 8
+    bonusSpeed: 0
   finalChosenPerk:
     perkName: 
     description: 
@@ -23732,7 +24013,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 69190650}
-  - {fileID: 829036090}
   - {fileID: 759496857}
   - {fileID: 1830824131}
   - {fileID: 1425093678}

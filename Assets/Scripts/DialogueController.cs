@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+using UnityEngine;
+using UnityEngine.InputSystem;
 using TMPro; // Required for TextMeshPro
 using System.Collections;
 
@@ -7,6 +8,10 @@ public class DialogueController : MonoBehaviour
     [Header("UI References")]
     public TextMeshProUGUI dialogueTextComponent;
     public IntroSequenceManager introManager;
+
+    [Header("Character Animation")]
+    public Animator characterAnimator;
+    public string talkingParameter = "IsTalking";
 
     [Header("Typing Settings")]
     public float typingSpeed = 0.05f;
@@ -23,8 +28,14 @@ public class DialogueController : MonoBehaviour
 
     void Update()
     {
+        if (currentDialogueBlock == null || currentDialogueBlock.Length == 0) return;
+
+        // Check if mouse or keyboard exist before checking input to prevent errors
+        bool mouseClicked = Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame;
+        bool spacePressed = Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame;
+
         // Listen for left mouse click or Spacebar to advance/skip
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+        if (mouseClicked || spacePressed)
         {
             if (isTyping)
             {
@@ -32,6 +43,7 @@ public class DialogueController : MonoBehaviour
                 StopCoroutine(typingCoroutine);
                 dialogueTextComponent.text = currentDialogueBlock[currentLineIndex];
                 isTyping = false;
+                if (characterAnimator != null) characterAnimator.SetBool(talkingParameter, false);
             }
             else
             {
@@ -92,6 +104,8 @@ public class DialogueController : MonoBehaviour
     private IEnumerator TypeLine()
     {
         isTyping = true;
+        if (characterAnimator != null) characterAnimator.SetBool(talkingParameter, true);
+        
         dialogueTextComponent.text = "";
 
         // Convert the string to a character array and type one by one
@@ -102,5 +116,6 @@ public class DialogueController : MonoBehaviour
         }
 
         isTyping = false;
+        if (characterAnimator != null) characterAnimator.SetBool(talkingParameter, false);
     }
 }

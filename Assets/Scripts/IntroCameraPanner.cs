@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class IntroCameraPanner : MonoBehaviour
@@ -7,7 +7,7 @@ public class IntroCameraPanner : MonoBehaviour
     public IntroSequenceManager introManager;
 
     [Header("Camera Targets (Empty GameObjects)")]
-    public Transform goddessView;   // Where the camera starts
+    public Transform goddessView;   // Where the camera looks during goddess dialogue
     public Transform statMenuView;  // Where the camera looks during stat allocation
     public Transform portalView;    // Where the camera looks before transitioning
 
@@ -17,16 +17,6 @@ public class IntroCameraPanner : MonoBehaviour
     public AnimationCurve panCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
 
     private bool isPanning = false;
-
-    void Start()
-    {
-        // Snap the camera to the starting Goddess view immediately
-        if (goddessView != null)
-        {
-            transform.position = goddessView.position;
-            transform.rotation = goddessView.rotation;
-        }
-    }
 
     // --- Public Triggers ---
 
@@ -63,6 +53,15 @@ public class IntroCameraPanner : MonoBehaviour
                 // Tell the Intro Manager we arrived, so it can start the dialogue
                 introManager.OnGoddessPanComplete();
             }));
+        }
+    }
+
+    public void PanToPlayer()
+    {
+        PlayerMovement pm = FindObjectOfType<PlayerMovement>();
+        if (pm != null && !isPanning)
+        {
+            StartCoroutine(PanToTarget(pm.transform, null));
         }
     }
 

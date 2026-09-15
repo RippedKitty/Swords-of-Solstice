@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using Unity.Properties;
 
 public class IntroSequenceManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class IntroSequenceManager : MonoBehaviour
         PerkSelection,
         GoddessDialogue2,
         PanToStatAllocation,
+        WaitForCrystalBall,
         StatAllocation,
         GoddessDialogue3,
         PanToPortal,
@@ -36,6 +38,8 @@ public class IntroSequenceManager : MonoBehaviour
     public Animator introAnimator; // Drag your screen-covering Animator here
     public string introAnimationTrigger = "PlayIntro"; // The trigger parameter in your Animator Controller
     public float openingAnimationDuration = 3.0f; // Set this to exactly match your animation clip length
+    public GameObject fadeImage;
+    public GameObject backgroundOfAnim;
 
     [Header("Fade Settings")]
     public float fadeStepDelay = 0.5f;
@@ -66,6 +70,10 @@ public class IntroSequenceManager : MonoBehaviour
                 perkSelectionUI.SetActive(false);
                 statAllocationUI.SetActive(false);
 
+                // Disable player movement
+                PlayerMovement initPm = FindObjectOfType<PlayerMovement>();
+                if (initPm != null) initPm.canMove = false;
+
                 // Move directly to playing the animation
                 SetState(IntroState.PlayOpeningAnimation);
                 break;
@@ -73,8 +81,7 @@ public class IntroSequenceManager : MonoBehaviour
             case IntroState.PlayOpeningAnimation:
                 if (introAnimator != null)
                 {
-                    introAnimator.gameObject.SetActive(true);
-                    introAnimator.SetTrigger(introAnimationTrigger);
+                    StartCoroutine(ActivateAndTriggerAnimator());
                 }
 
                 // Start the timer to wait for the animation to finish playing
@@ -93,7 +100,7 @@ public class IntroSequenceManager : MonoBehaviour
 
             case IntroState.GoddessDialogue1:
                 dialogueUI.SetActive(true);
-                // dialogueController.StartPhase1();
+                dialogueController.StartPhase1();
                 Debug.Log("Goddess: 'You are asleep...'");
                 break;
 
@@ -106,7 +113,7 @@ public class IntroSequenceManager : MonoBehaviour
             case IntroState.GoddessDialogue2:
                 perkSelectionUI.SetActive(false);
                 dialogueUI.SetActive(true);
-                // dialogueController.StartPhase2();
+                dialogueController.StartPhase2();
                 Debug.Log("Goddess: 'An interesting choice...'");
                 break;
 
@@ -116,7 +123,15 @@ public class IntroSequenceManager : MonoBehaviour
                 cameraPanner.PanToStatMenu(); // Trigger the camera
                 break;
 
+            case IntroState.WaitForCrystalBall:
+                Debug.Log("Holding on Crystal Ball...");
+                StartCoroutine(HoldAndPanToPlayerRoutine());
+                break;
+
             case IntroState.StatAllocation:
+                PlayerMovement statPm = FindObjectOfType<PlayerMovement>();
+                if (statPm != null) statPm.canMove = false;
+                
                 perkSelectionUI.SetActive(false);
                 statAllocationUI.SetActive(true);
                 Debug.Log("Waiting for player to allocate stats...");
@@ -125,7 +140,7 @@ public class IntroSequenceManager : MonoBehaviour
             case IntroState.GoddessDialogue3:
                 statAllocationUI.SetActive(false);
                 dialogueUI.SetActive(true);
-                // dialogueController.StartPhase3();
+                dialogueController.StartPhase3();
                 Debug.Log("Goddess: 'Your soul is prepared...'");
                 break;
 
@@ -144,6 +159,28 @@ public class IntroSequenceManager : MonoBehaviour
 
     // --- Coroutines ---
 
+    private IEnumerator ActivateAndTriggerAnimator()
+    {
+        introAnimator.gameObject.SetActive(true);
+
+        // Wait exactly one frame to let the Animator initialize
+        yield return null;
+
+        introAnimator.SetTrigger(introAnimationTrigger);
+    }
+
+    private IEnumerator HoldAndPanToPlayerRoutine()
+    {
+        // Wait for 1 second while holding on the crystal ball
+        yield return new WaitForSeconds(1.0f);
+
+        Debug.Log("Waiting for player to walk to Crystal Ball...");
+        cameraPanner.PanToPlayer();
+        
+        PlayerMovement waitPm = FindObjectOfType<PlayerMovement>();
+        if (waitPm != null) waitPm.canMove = true;
+    }
+
     private IEnumerator WaitAndFinishOpeningAnimation()
     {
         yield return new WaitForSeconds(openingAnimationDuration);
@@ -153,6 +190,8 @@ public class IntroSequenceManager : MonoBehaviour
         // Target the UI Image directly instead of a Canvas Group
         UnityEngine.UI.Image uiImage = introAnimator.GetComponent<UnityEngine.UI.Image>();
         SpriteRenderer spriteRenderer = introAnimator.GetComponent<SpriteRenderer>();
+        backgroundOfAnim.SetActive(false);
+        fadeImage.SetActive(false);
 
         while (elapsedTime < animationFadeOutDuration)
         {
@@ -248,9 +287,16 @@ public class IntroSequenceManager : MonoBehaviour
     {
         if (currentState == IntroState.PanToStatAllocation)
         {
+            SetState(IntroState.WaitForCrystalBall);
+        }
+    }
+
+    public void TriggerStatAllocation()
+    {
+        if (currentState == IntroState.WaitForCrystalBall)
+        {
             SetState(IntroState.StatAllocation);
         }
-
     }
 
 
